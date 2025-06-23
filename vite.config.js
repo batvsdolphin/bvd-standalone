@@ -7,6 +7,7 @@ export default defineConfig({
       include: "**/*.{jsx,tsx}",
     }),
   ],
+  base: "/",
   build: {
     outDir: "dist",
   },
