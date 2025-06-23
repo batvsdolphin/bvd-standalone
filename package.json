@@ -19,8 +19,7 @@
     "build": "vite build",
     "dev": "vite serve",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build; cd build; rsync -avzrh --exclude .DS_Store  -e 'ssh -i ~/.ssh/id_rsa' * root@167.99.11.114:/var/www/batvsdolphin.com/frontend-test"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
