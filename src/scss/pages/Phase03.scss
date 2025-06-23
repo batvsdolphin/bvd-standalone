@@ -1,0 +1,457 @@
+.Phase-III {
+  &__Title {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    max-width: 800px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .III-Content {
+    font-family: "proxima-nova", sans-serif;
+  }
+
+  button {
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  small {
+    font-size: 15px;
+    color: gray;
+    padding-bottom: 10px;
+    display: block;
+  }
+  h4 {
+    font-size: 25px;
+    line-height: 17px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  h2 {
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 27px;
+  }
+  .III-Grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .III-Grid ul {
+    margin: 0 auto;
+    display: grid;
+    $gridSize:250px;
+    grid-template-columns: $gridSize $gridSize $gridSize;
+    grid-template-rows: $gridSize $gridSize $gridSize;
+    gap: 30px;
+  }
+  .III-Grid ul li {
+    display: inline-block;
+    cursor: pointer;
+    list-style: none;
+    padding: 15px;
+    border: 1px solid transparent;
+    transition: box-shadow 300ms, transform 300ms;
+    position: relative;
+    &:hover {
+      border: 1px solid #eeeeee;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+    }
+    .image {
+      // width: 100%;
+      // height: 100%;
+      background-size: contain !important;
+    }
+  }
+  .III-Entry-Buttons button {
+    border-radius: 0;
+    background: none;
+    border: 1px solid gray;
+    margin: 0;
+    display: block;
+    width: 50%;
+    float: left;
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 30px;
+
+    &:hover {
+      border: 1px solid gray;
+      background-color: #eeeeee;
+      z-index: 10;
+    }
+  }
+  .III-Entry-Buttons button:nth-child(1) {
+    text-align: right;
+  }
+  .III-Entry-Buttons button:nth-child(2) {
+    text-align: left;
+    margin-left: -1px;
+  }
+  .III-Entry-Buttons button.is-Showing {
+    background-image: url("/img/global/close.png");
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+    border: 1px solid gray;
+    z-index: 10;
+    // background-color: black;
+
+    small {
+      opacity: 0.7;
+    }
+
+    h4 {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      border: 1px solid black;
+      opacity: 1;
+      h4,
+      small {
+        opacity: 0.4;
+      }
+    }
+  }
+  .III-Entry-Buttons button.is-Showing:nth-child(1) {
+    background-position: 5% center;
+  }
+  .III-Entry-Buttons button.is-Showing:nth-child(2) {
+    background-position: 95% center;
+  }
+  .III-Nav {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    bottom: 0;
+    background: white;
+    .III-Single-Width {
+      padding: 20px 30px 0 30px;
+      border-top: 1px solid #eeeeee;
+    }
+    .III-Nav-Grid {
+      margin: 0 auto;
+      display: table;
+      width: 28px;
+      height: 28px;
+      background: url("/img/global/grid.png");
+      background-size: 28px 28px;
+      background-repeat: no-repeat;
+      border: none;
+      background-color: none;
+      opacity: 0.3;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .III-Nav-NextPrev {
+      width: 60px;
+      height: 30px;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      border: none;
+      opacity: 0.5;
+      display: block;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .III-Nav-Next,
+    .III-Nav-HoldNext {
+      float: right;
+    }
+    .III-Nav-Previous,
+    .III-Nav-HoldPrevious {
+      float: left;
+    }
+    .III-Nav-Next {
+      background: url("/img/global/arrow-right.png");
+    }
+    .III-Nav-Previous {
+      background: url("/img/global/arrow-left.png");
+    }
+  }
+  .III-Response {
+    width: 50%;
+    padding-top: 50px;
+  }
+  .III-Response h2 {
+    margin-bottom: 10px;
+  }
+  .ResponseText {
+    font-family: "calluna", serif;
+    font-size: 19px;
+    line-height: 31px;
+    a {
+      text-decoration: none;
+      border-bottom: 1px dotted gray;
+      color: black;
+      &:hover {
+        border-bottom: 1px solid black;
+      }
+      &:visited {
+        color: gray;
+      }
+    }
+    p {
+      padding-bottom: 20px;
+    }
+  }
+  .III-Single {
+    padding-bottom: 150px;
+    .III-Response {
+      display: none;
+    }
+  }
+  .III-Single-Width {
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .III-Single img {
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding-top: 30px;
+  }
+  .III-Single#show_sanju img,
+  .III-Single#show_nate img {
+    width: 45%;
+    height: auto;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .III-Single {
+    &.show_sanju {
+      .III-Response-Sanju {
+        display: block;
+        float: left;
+      }
+      img {
+        float: right;
+      }
+    }
+    &.show_nate {
+      .III-Response-Nate {
+        display: block;
+        float: right;
+      }
+      img {
+        float: left;
+      }
+    }
+  }
+}
+
+// Phase III - Rorschach Blots
+.Phase03 {
+  font-family: "proxima-nova", sans-serif;
+
+  .Phase03__Title {
+    width: 40%;
+    margin: 0 auto 50px auto;
+    padding-top: 70px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // Typography overrides
+  button {
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  small {
+    font-size: 12px;
+    color: lighten(gray, 20%);
+  }
+
+  h4 {
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 27px;
+  }
+
+  // Grid View
+  .Phase03__Grid {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 100px;
+
+    li {
+      display: inline-block;
+      cursor: pointer;
+      list-style: none;
+      padding: 15px;
+      border: 1px solid transparent;
+      transition: box-shadow 300ms, transform 300ms;
+
+      &:hover {
+        border: 1px solid #eeeeee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.08);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  // Selection View
+  .Phase03__Selection {
+    padding-bottom: 150px;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+
+    > button {
+      margin: 0 auto;
+      display: table;
+      width: 28px;
+      height: 28px;
+      background: url("/img/global/grid.png");
+      background-size: 28px 28px;
+      background-repeat: no-repeat;
+      border: none;
+      background-color: transparent;
+      opacity: 0.3;
+      cursor: pointer;
+      margin-top: 50px;
+      margin-bottom: 30px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    img {
+      width: 45%;
+      height: auto;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  .Phase03__SanjuTab {
+    width: 50%;
+    float: left;
+
+    img {
+      float: right;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 27px;
+      font-weight: bold;
+      line-height: 27px;
+    }
+  }
+
+  .Phase03__NateTab {
+    width: 50%;
+    float: right;
+
+    img {
+      float: left;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 27px;
+      font-weight: bold;
+      line-height: 27px;
+    }
+  }
+
+  // Response text styling
+  .ResponseText {
+    font-family: "calluna", serif;
+    font-size: 19px;
+    line-height: 31px;
+
+    a {
+      text-decoration: none;
+      border-bottom: 1px dotted gray;
+      color: black;
+
+      &:hover {
+        border-bottom: 1px solid black;
+      }
+
+      &:visited {
+        color: gray;
+      }
+    }
+
+    p {
+      padding-bottom: 20px;
+    }
+  }
+
+  // Navigation
+  .Phase03__Nav {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    bottom: 0;
+    background: white;
+    padding: 20px 30px 0 30px;
+    border-top: 1px solid #eeeeee;
+
+    .nav-button {
+      width: 60px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: none;
+      opacity: 0.5;
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.next {
+        float: right;
+        background-image: url("/img/global/arrow-right.png");
+      }
+
+      &.previous {
+        float: left;
+        background-image: url("/img/global/arrow-left.png");
+      }
+    }
+  }
+}

@@ -1,0 +1,284 @@
+[
+  [
+    {
+      "img": {
+        "thumbnail": "bvd_10_03_2016-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "bvd_10_03_2016-300x92.jpg",
+        "medium-width": 300,
+        "medium-height": 92,
+        "medium_large": "bvd_10_03_2016-768x236.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 236,
+        "large": "bvd_10_03_2016-1024x315.jpg",
+        "large-width": 1024,
+        "large-height": 315,
+        "1536x1536": "bvd_10_03_2016.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 472,
+        "2048x2048": "bvd_10_03_2016.jpg",
+        "2048x2048-width": 2000,
+        "2048x2048-height": 615
+      },
+      "credit": "Sanju"
+    },
+    {
+      "img": {
+        "thumbnail": "week3-panel2-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "week3-panel2-300x95.jpg",
+        "medium-width": 300,
+        "medium-height": 95,
+        "medium_large": "week3-panel2-768x243.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 243,
+        "large": "week3-panel2-1024x324.jpg",
+        "large-width": 1024,
+        "large-height": 324,
+        "1536x1536": "week3-panel2.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 486,
+        "2048x2048": "week3-panel2.jpg",
+        "2048x2048-width": 2048,
+        "2048x2048-height": 647
+      },
+      "credit": "Nate"
+    },
+    {
+      "img": {
+        "thumbnail": "bvd_10_11_2016-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "bvd_10_11_2016-300x92.jpg",
+        "medium-width": 300,
+        "medium-height": 92,
+        "medium_large": "bvd_10_11_2016-768x236.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 236,
+        "large": "bvd_10_11_2016-1024x315.jpg",
+        "large-width": 1024,
+        "large-height": 315,
+        "1536x1536": "bvd_10_11_2016.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 472,
+        "2048x2048": "bvd_10_11_2016.jpg",
+        "2048x2048-width": 2000,
+        "2048x2048-height": 615
+      },
+      "credit": "Sanju"
+    },
+    {
+      "img": {
+        "thumbnail": "nl-panel-final-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "nl-panel-final-300x95.jpg",
+        "medium-width": 300,
+        "medium-height": 95,
+        "medium_large": "nl-panel-final-768x243.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 243,
+        "large": "nl-panel-final-1024x324.jpg",
+        "large-width": 1024,
+        "large-height": 324,
+        "1536x1536": "nl-panel-final.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 486,
+        "2048x2048": "nl-panel-final.jpg",
+        "2048x2048-width": 2048,
+        "2048x2048-height": 647
+      },
+      "credit": "Nate"
+    }
+  ],
+  [
+    {
+      "img": {
+        "thumbnail": "week2-panel1-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "week2-panel1-300x92.jpg",
+        "medium-width": 300,
+        "medium-height": 92,
+        "medium_large": "week2-panel1-768x236.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 236,
+        "large": "week2-panel1-1024x315.jpg",
+        "large-width": 1024,
+        "large-height": 315,
+        "1536x1536": "week2-panel1.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 472,
+        "2048x2048": "week2-panel1.jpg",
+        "2048x2048-width": 2000,
+        "2048x2048-height": 615
+      },
+      "credit": "Nate"
+    },
+    {
+      "img": {
+        "thumbnail": "bvd-09-30-2016-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "bvd-09-30-2016-300x92.jpg",
+        "medium-width": 300,
+        "medium-height": 92,
+        "medium_large": "bvd-09-30-2016-768x236.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 236,
+        "large": "bvd-09-30-2016-1024x315.jpg",
+        "large-width": 1024,
+        "large-height": 315,
+        "1536x1536": "bvd-09-30-2016.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 472,
+        "2048x2048": "bvd-09-30-2016.jpg",
+        "2048x2048-width": 2000,
+        "2048x2048-height": 615
+      },
+      "credit": "Sanju"
+    },
+    {
+      "img": {
+        "thumbnail": "week2-panel3-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "week2-panel3-300x100.jpg",
+        "medium-width": 300,
+        "medium-height": 100,
+        "medium_large": "week2-panel3-768x255.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 255,
+        "large": "week2-panel3-1024x340.jpg",
+        "large-width": 1024,
+        "large-height": 340,
+        "1536x1536": "week2-panel3.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 511,
+        "2048x2048": "week2-panel3.jpg",
+        "2048x2048-width": 2048,
+        "2048x2048-height": 681
+      },
+      "credit": "Nate"
+    },
+    {
+      "img": {
+        "thumbnail": "bvd_09_29_2016-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "bvd_09_29_2016-300x92.jpg",
+        "medium-width": 300,
+        "medium-height": 92,
+        "medium_large": "bvd_09_29_2016-768x236.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 236,
+        "large": "bvd_09_29_2016-1024x315.jpg",
+        "large-width": 1024,
+        "large-height": 315,
+        "1536x1536": "bvd_09_29_2016.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 472,
+        "2048x2048": "bvd_09_29_2016.jpg",
+        "2048x2048-width": 2000,
+        "2048x2048-height": 615
+      },
+      "credit": "Sanju"
+    }
+  ],
+  [
+    {
+      "img": {
+        "thumbnail": "week-1-panel-1-update2-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "week-1-panel-1-update2-300x93.jpg",
+        "medium-width": 300,
+        "medium-height": 93,
+        "medium_large": "week-1-panel-1-update2-768x239.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 239,
+        "large": "week-1-panel-1-update2-1024x319.jpg",
+        "large-width": 1024,
+        "large-height": 319,
+        "1536x1536": "week-1-panel-1-update2.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 478,
+        "2048x2048": "week-1-panel-1-update2.jpg",
+        "2048x2048-width": 1976,
+        "2048x2048-height": 615
+      },
+      "credit": "Sanju"
+    },
+    {
+      "img": {
+        "thumbnail": "week1-panel2b-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "week1-panel2b-300x92.jpg",
+        "medium-width": 300,
+        "medium-height": 92,
+        "medium_large": "week1-panel2b-768x236.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 236,
+        "large": "week1-panel2b-1024x315.jpg",
+        "large-width": 1024,
+        "large-height": 315,
+        "1536x1536": "week1-panel2b.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 472,
+        "2048x2048": "week1-panel2b.jpg",
+        "2048x2048-width": 2000,
+        "2048x2048-height": 615
+      },
+      "credit": "Nate"
+    },
+    {
+      "img": {
+        "thumbnail": "Week-1-Panel-3-updated2-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "Week-1-Panel-3-updated2-300x96.jpg",
+        "medium-width": 300,
+        "medium-height": 96,
+        "medium_large": "Week-1-Panel-3-updated2-768x245.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 245,
+        "large": "Week-1-Panel-3-updated2-1024x326.jpg",
+        "large-width": 1024,
+        "large-height": 326,
+        "1536x1536": "Week-1-Panel-3-updated2.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 489,
+        "2048x2048": "Week-1-Panel-3-updated2.jpg",
+        "2048x2048-width": 1930,
+        "2048x2048-height": 615
+      },
+      "credit": "Sanju"
+    },
+    {
+      "img": {
+        "thumbnail": "week1-panel4-150x150.jpg",
+        "thumbnail-width": 150,
+        "thumbnail-height": 150,
+        "medium": "week1-panel4-300x92.jpg",
+        "medium-width": 300,
+        "medium-height": 92,
+        "medium_large": "week1-panel4-768x236.jpg",
+        "medium_large-width": 768,
+        "medium_large-height": 236,
+        "large": "week1-panel4-1024x315.jpg",
+        "large-width": 1024,
+        "large-height": 315,
+        "1536x1536": "week1-panel4.jpg",
+        "1536x1536-width": 1536,
+        "1536x1536-height": 472,
+        "2048x2048": "week1-panel4.jpg",
+        "2048x2048-width": 2000,
+        "2048x2048-height": 615
+      },
+      "credit": "Nate"
+    }
+  ]
+]

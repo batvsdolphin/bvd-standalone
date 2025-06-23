@@ -1,0 +1,14 @@
+.Logo {
+  // border: 1px solid red;
+  // background-color: gray;
+  height: 50px;
+  width: 200px;
+  background-size: contain;
+  position: absolute;
+  margin: 25px 30px;
+  background-repeat: no-repeat;
+  background-image: url("./img/global/title.png");
+  &--dark {
+    background-image: url("./img/global/title-white.png");
+  }
+}

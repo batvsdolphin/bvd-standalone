@@ -1,0 +1,48 @@
+{
+  "name": "bvd-standalone",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "q5": "^2.28.7",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "html-react-parser": "^5.1.19",
+    "react-pageflip": "^2.0.3",
+    "react-router-dom": "^7.5.2",
+    "react-use-audio-player": "^4.0.2",
+    "sass": "^1.87.0",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite serve",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build; cd build; rsync -avzrh --exclude .DS_Store  -e 'ssh -i ~/.ssh/id_rsa' * root@167.99.11.114:/var/www/batvsdolphin.com/frontend-test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "vite": "^6.3.3",
+    "vite-plugin-html": "^3.2.2"
+  }
+}

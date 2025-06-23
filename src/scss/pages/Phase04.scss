@@ -1,0 +1,97 @@
+.Phase04 {
+  background: url("./src/img/phase04/paper.jpg");
+  background-size: 400px 400px;
+  border: 1px solid transparent;
+  min-height: 100vh;
+
+  &__Title {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    max-width: 800px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+
+  &__Content {
+    width: 90%;
+    max-width: 1000px;
+    border-top: 1px dashed #000;
+    margin: 0 auto;
+  }
+
+  &__Chapter {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+
+    @include breakpoint(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__SideNav {
+    padding: 0;
+
+    @include breakpoint(sm) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__SideNav li {
+    list-style: none;
+    margin-bottom: 30px;
+
+    &.is--active {
+      h3,
+      p {
+        color: cornflowerblue;
+      }
+    }
+
+    h3 {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  &__ChapterLink {
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+      color: cornflowerblue;
+    }
+  }
+
+  &__ChapterContent {
+    border-left: 1px dashed #000;
+    padding: 30px 0 0 50px;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: rgba(0, 0, 0, 0.8);
+
+    @include breakpoint(sm) {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  &__ChapterContent img {
+    width: 50%;
+    height: auto;
+    float: left;
+    transform: rotate(-3deg);
+    margin: 0 30px 30px 0;
+  }
+}

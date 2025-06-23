@@ -1,0 +1,90 @@
+// Phase V - Bar None
+.Phase-V {
+  background: #f8f8f4;
+  main {
+    width: 700px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  &__Title {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    max-width: 800px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .Entries {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .Entry {
+    text-align: center;
+    margin-bottom: 80px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #e6e6e6;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .Entry__Title {
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    .Entry__Author {
+      font-family: "Lato", sans-serif;
+      font-size: 18px;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+    .Entry__Description {
+      font-family: "Noto Serif TC", serif;
+      font-size: 19px;
+      padding: 20px 0;
+    }
+    .Player {
+      margin-top: 30px;
+
+      .Button,
+      button {
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: white;
+        border: 3px solid #d0021b;
+        color: #d0021b;
+        width: 110px;
+        padding: 5px 20px;
+        margin: 10px 5px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+
+        &:hover {
+          background-color: #d0021b;
+          color: white;
+        }
+      }
+      p {
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+
