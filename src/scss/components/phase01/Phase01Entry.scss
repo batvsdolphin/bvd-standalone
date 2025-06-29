@@ -83,6 +83,7 @@
     height: 150px;
     display: block;
     border-radius: 150px;
+    position: relative;
   }
 
   .AudioTitle {
@@ -90,6 +91,26 @@
     font-size: 20px;
     width: 220px;
   }
+}
+
+// Digital font import
+@font-face {
+  font-family: 'Digital-7';
+  src: url('/img/phase01/digital-7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.CountdownTimer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Digital-7', monospace;
+  font-size: 50px;
+  font-weight: normal;
+  pointer-events: none;
+  z-index: 10;
 }
 
 // Extra styles

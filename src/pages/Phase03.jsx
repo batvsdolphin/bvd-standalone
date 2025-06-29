@@ -90,7 +90,6 @@ const Phase03 = () => {
               height: "auto",
               margin: "0 auto",
               display: "block",
-              paddingTop: showResponse ? 70 : 50,
             }}
           />
         </div>

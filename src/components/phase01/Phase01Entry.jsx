@@ -1,17 +1,36 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Phase01Entry = ({ data, count }) => {
   const { nate, sanju } = data;
 
   const sanjuAudioRef = useRef(null);
   const nateAudioRef = useRef(null);
+  const sanjuTimerRef = useRef(null);
+  const nateTimerRef = useRef(null);
 
-  const handleAudioPlay = (audioRef) => {
+  const [sanjuCountdown, setSanjuCountdown] = useState(0);
+  const [nateCountdown, setNateCountdown] = useState(0);
+
+  const handleAudioPlay = (audioRef, setCountdown, timerRef) => {
     audioRef.current.play();
+    setCountdown(10);
+    
+    timerRef.current = setInterval(() => {
+      setCountdown(prev => {
+        if (prev <= 1) {
+          clearInterval(timerRef.current);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
   };
 
-  const handleAudioPause = (audioRef) => {
+  const handleAudioPause = (audioRef, setCountdown, timerRef) => {
     audioRef.current.pause();
+    audioRef.current.currentTime = 0;
+    setCountdown(0);
+    clearInterval(timerRef.current);
   };
 
   return (
@@ -31,9 +50,15 @@ const Phase01Entry = ({ data, count }) => {
               className="AudioCircle hvr-pulse"
               style={{ borderColor: sanju.color }}
               title={sanju.description}
-              onMouseEnter={() => handleAudioPlay(sanjuAudioRef)}
-              onMouseLeave={() => handleAudioPause(sanjuAudioRef)}
-            ></div>
+              onMouseEnter={() => handleAudioPlay(sanjuAudioRef, setSanjuCountdown, sanjuTimerRef)}
+              onMouseLeave={() => handleAudioPause(sanjuAudioRef, setSanjuCountdown, sanjuTimerRef)}
+            >
+              {sanjuCountdown > 0 && (
+                <div className="CountdownTimer" style={{ color: sanju.color }}>
+                  :{sanjuCountdown.toString().padStart(2, '0')}
+                </div>
+              )}
+            </div>
             <div className="Hidden">
               <div className="AudioTitle" style={{ color: sanju.color }}>
                 {sanju.sound_title}
@@ -53,9 +78,15 @@ const Phase01Entry = ({ data, count }) => {
               className="AudioCircle hvr-pulse"
               style={{ borderColor: nate.color }}
               title={nate.description}
-              onMouseEnter={() => handleAudioPlay(nateAudioRef)}
-              onMouseLeave={() => handleAudioPause(nateAudioRef)}
-            ></div>
+              onMouseEnter={() => handleAudioPlay(nateAudioRef, setNateCountdown, nateTimerRef)}
+              onMouseLeave={() => handleAudioPause(nateAudioRef, setNateCountdown, nateTimerRef)}
+            >
+              {nateCountdown > 0 && (
+                <div className="CountdownTimer" style={{ color: nate.color }}>
+                  :{nateCountdown.toString().padStart(2, '0')}
+                </div>
+              )}
+            </div>
             <div className="Hidden">
               <div className="AudioTitle" style={{ color: nate.color }}>
                 {nate.sound_title}

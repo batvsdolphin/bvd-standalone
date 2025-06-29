@@ -27,14 +27,6 @@ const Phase05 = () => {
       }
     };
 
-    const handleStop = () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
-        setIsPlaying(false);
-        setCurrentTime(0);
-      }
-    };
 
     const handleTimeUpdate = () => {
       if (audioRef.current) {
@@ -48,13 +40,14 @@ const Phase05 = () => {
       setCurrentTime(0);
     };
 
+    const formatTime = (time) => {
+      const minutes = Math.floor(time / 60);
+      const seconds = Math.floor(time % 60);
+      return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    };
+
     return (
-      <div
-        className="Player"
-        style={{
-          border: isPlaying ? "1px solid #D0021B" : "1px solid #eee",
-        }}
-      >
+      <div className="Player">
         <audio
           ref={audioRef}
           src={url}
@@ -63,15 +56,12 @@ const Phase05 = () => {
           onLoadedMetadata={() => setDuration(audioRef.current?.duration || 0)}
           preload="metadata"
         />
-        <p>
-          {Math.floor(currentTime)}s / {Math.floor(duration)}s
-        </p>
         <button className="Button" onClick={handlePlay}>
           {isPlaying ? "PAUSE" : "PLAY"}
         </button>
-        <button className="Button" onClick={handleStop}>
-          RESET
-        </button>
+        <div className="Player__Time">
+          {formatTime(currentTime)}
+        </div>
       </div>
     );
   };
@@ -88,12 +78,14 @@ const Phase05 = () => {
           ) : phaseData ? (
             phaseData.map((clip, i) => (
               <li className="Entry" key={`clip${i}`}>
-                <div className="Entry__Title">{clip.title}</div>
-                <div className="Entry__Author">{clip.author}</div>
-                <div className="Entry__Description">
-                  {parse(clip.description)}
+                <div className="Entry__Content">
+                  <div className="Entry__Title">{clip.title}</div>
+                  <div className="Entry__Author">{clip.author}</div>
+                  <Player url={clip.audio_file} />
+                  <div className="Entry__Description">
+                    {parse(clip.description)}
+                  </div>
                 </div>
-                <Player url={clip.audio_file} />
               </li>
             ))
           ) : null}

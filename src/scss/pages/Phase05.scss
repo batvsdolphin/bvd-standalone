@@ -24,37 +24,67 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    counter-reset: entry-counter;
   }
 
   .Entry {
-    text-align: center;
+    display: flex;
     margin-bottom: 80px;
     padding-bottom: 100px;
     border-bottom: 1px solid #e6e6e6;
+    border: 1px dashed #ccc;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto 80px auto;
 
     &:last-child {
-      border-bottom: none;
+      border-bottom: 1px dashed #ccc;
+    }
+
+    &::before {
+      content: counter(entry-counter, decimal-leading-zero);
+      counter-increment: entry-counter;
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      font-size: 48px;
+      color: #000;
+      margin-right: 40px;
+      flex-shrink: 0;
+      width: 80px;
+    }
+
+    .Entry__Content {
+      flex: 1;
     }
 
     .Entry__Title {
       font-family: "Lato", sans-serif;
-      font-weight: bold;
-      font-size: 25px;
-      margin-bottom: 10px;
+      font-weight: normal;
+      font-size: 36px;
+      margin-bottom: 5px;
+      text-align: left;
     }
     .Entry__Author {
       font-family: "Lato", sans-serif;
       font-size: 18px;
-      opacity: 0.5;
-      margin-bottom: 20px;
+      font-style: italic;
+      color: #000;
+      margin-bottom: 30px;
+      text-align: left;
     }
     .Entry__Description {
       font-family: "Noto Serif TC", serif;
-      font-size: 19px;
-      padding: 20px 0;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      text-align: left;
     }
     .Player {
       margin-top: 30px;
+      border: 2px solid #000;
+      display: flex;
+      width: 400px;
+      height: 60px;
 
       .Button,
       button {
@@ -62,26 +92,45 @@
         font-weight: bold;
         text-transform: uppercase;
         background-color: white;
-        border: 3px solid #d0021b;
-        color: #d0021b;
-        width: 110px;
-        padding: 5px 20px;
-        margin: 10px 5px;
+        border: none;
+        border-right: 2px solid #000;
+        color: #000;
+        flex: 1;
+        padding: 0;
+        margin: 0;
         position: relative;
-        z-index: 10;
-        text-align: center;
         cursor: pointer;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
-          background-color: #d0021b;
-          color: white;
+          background-color: #f0f0f0;
+        }
+
+        &::before {
+          content: "▶";
+          font-size: 16px;
+          margin-right: 8px;
         }
       }
+
+      button:first-of-type[data-playing="true"]::before {
+        content: "⏸";
+      }
+
       p {
         font-family: "Lato", sans-serif;
-        font-size: 14px;
-        margin: 10px 0;
+        font-size: 16px;
+        margin: 0;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-left: 2px solid #000;
+        flex-shrink: 0;
+        width: 80px;
       }
     }
   }
