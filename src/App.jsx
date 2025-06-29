@@ -14,7 +14,7 @@ const App = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Phase01 />,
+    element: <Phase05 />,
   },
   {
     path: "/phase-i",
@@ -35,10 +35,6 @@ const router = createBrowserRouter([
   {
     path: "/phase-v",
     element: <Phase05 />
-  },
-  {
-    path: "/phase-vi",
-    element: <Phase06 />
   },
   {
     path: "*",

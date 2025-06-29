@@ -1,5 +1,5 @@
 .Phase-III {
-    background-color: #f7f7f7;
+  background-color: #f7f7f7;
   padding-bottom: 200px;
   &__Title {
     width: 60%;
@@ -51,7 +51,7 @@
   .III-Grid ul {
     margin: 0 auto;
     display: grid;
-    $gridSize:250px;
+    $gridSize: 250px;
     grid-template-columns: $gridSize $gridSize $gridSize;
     grid-template-rows: $gridSize $gridSize $gridSize;
     gap: 30px;
@@ -197,6 +197,19 @@
   .III-Response h2 {
     margin-bottom: 10px;
   }
+  
+  .III-ResponseButtons {
+  }
+  .u-clearboth {
+    clear: both;
+    margin-bottom: 30px;
+  }
+  
+  .III-Response-Image img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+
   .ResponseText {
     font-family: "calluna", serif;
     font-size: 19px;
@@ -219,7 +232,7 @@
   .III-Single {
     padding-bottom: 150px;
     height: 100vh;
-    
+
     .III-Response {
       display: none;
     }
@@ -244,8 +257,6 @@
     padding-top: 0;
   }
   .III-Single {
-
-  
     &.show_sanju {
       .III-Response-Sanju {
         display: block;

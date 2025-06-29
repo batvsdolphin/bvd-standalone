@@ -68,15 +68,17 @@ const Phase03 = () => {
           </button>
           <div className="u-clearboth"></div>
         </div>
-        <div className="III-Response III-Response-Sanju">
-          <div className="ResponseText js-responseText">
-            {parse(current.sanju.response)}
+        <div className="III-ResponseButtons">
+          <div className="III-Response III-Response-Sanju">
+            <div className="ResponseText js-responseText">
+              {parse(current.sanju.response)}
+            </div>
+            <small>Sanju</small>
           </div>
-          <small>Sanju</small>
-        </div>
-        <div className="III-Response III-Response-Nate">
-          <div className="ResponseText">{parse(current.nate.response)}</div>
-          <small>Nate</small>
+          <div className="III-Response III-Response-Nate">
+            <div className="ResponseText">{parse(current.nate.response)}</div>
+            <small>Nate</small>
+          </div>
         </div>
         <div className="III-Response-Image">
           <img
@@ -88,8 +90,9 @@ const Phase03 = () => {
             style={{
               width: showResponse ? "45%" : "75%",
               height: "auto",
-              margin: "0 auto",
               display: "block",
+                marginTop: showResponse ? "50px" : "10px",
+
             }}
           />
         </div>
