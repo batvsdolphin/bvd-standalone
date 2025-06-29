@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const navData = [
   {
@@ -61,7 +62,7 @@ const Nav = ({ mode }) => {
         <ul>
           {navData.map((item, i) => (
             <li key={`nav${i}`} className="Nav__Item">
-              <a href={`/${item.link}`}>
+              <Link to={`/${item.link}`}>
                 <div className="Nav__Item__Phase">
                   <h3>{item.phase}</h3>
                 </div>
@@ -69,7 +70,7 @@ const Nav = ({ mode }) => {
                   <h3>{item.name}</h3>
                   <p>{item.description}</p>
                 </div>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
