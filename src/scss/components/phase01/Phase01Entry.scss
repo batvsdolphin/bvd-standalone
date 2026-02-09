@@ -7,6 +7,15 @@
   margin-left: -50px;
   cursor: pointer;
 
+  @include breakpoint(sm) {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 40px;
+    height: auto;
+    padding-top: 0;
+    overflow: visible;
+  }
+
   &:hover {
     z-index: 100;
 
@@ -30,15 +39,40 @@
     }
   }
 
+  @include breakpoint(sm) {
+    .Hidden {
+      display: block !important;
+      opacity: 1 !important;
+    }
+
+    .EntryContent {
+      position: relative !important;
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15) !important;
+      background: white !important;
+      height: auto !important;
+      margin-top: 0 !important;
+      padding: 20px 15px !important;
+    }
+  }
+
   .EntryContent,
   .EntryShim {
     width: 500px;
     height: 250px;
     list-style: none;
+
+    @include breakpoint(sm) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .EntryContent {
     padding: 0 25px;
+
+    @include breakpoint(sm) {
+      padding: 20px 15px;
+    }
   }
 
   .EntryShim,
@@ -55,11 +89,26 @@
     margin-bottom: 20px;
     font-weight: lighter;
     opacity: 0.3;
+
+    @include breakpoint(sm) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
   }
 
   .AudioEntry {
     float: left;
     width: 50%;
+
+    @include breakpoint(sm) {
+      float: none;
+      width: 100%;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .AudioCircle,
@@ -68,6 +117,10 @@
     margin: 0 auto;
     text-align: center;
     width: 150px;
+
+    @include breakpoint(sm) {
+      width: 120px;
+    }
   }
 
   .AudioName {
@@ -75,6 +128,11 @@
     margin-bottom: 10px;
     text-transform: capitalize;
     opacity: 0.5;
+
+    @include breakpoint(sm) {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
   }
 
   .AudioCircle {
@@ -84,12 +142,26 @@
     display: block;
     border-radius: 150px;
     position: relative;
+
+    @include breakpoint(sm) {
+      width: 120px;
+      height: 120px;
+      border-width: 8px;
+      border-radius: 120px;
+    }
   }
 
   .AudioTitle {
     margin-top: 20px;
     font-size: 20px;
     width: 220px;
+
+    @include breakpoint(sm) {
+      margin-top: 15px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 250px;
+    }
   }
 }
 
@@ -111,6 +183,10 @@
   font-weight: normal;
   pointer-events: none;
   z-index: 10;
+
+  @include breakpoint(sm) {
+    font-size: 40px;
+  }
 }
 
 // Extra styles

@@ -5,11 +5,14 @@ import parse from "html-react-parser";
 
 const Phase03 = () => {
   const [selected, setSelected] = useState(0);
-  const [showResponse, setShowResponse] = useState(null); // 'show_sanju' | 'show_nate' | null
+  const isMobile = window.innerWidth <= 768;
+  const [showResponse, setShowResponse] = useState(isMobile ? 'show_sanju' : null); // 'show_sanju' | 'show_nate' | null
   const { phaseData, isLoading } = usePhaseData(3);
 
   useEffect(() => {
-    setShowResponse(null); // Reset response when changing selection
+    const isMobile = window.innerWidth <= 768;
+    setShowResponse(isMobile ? 'show_sanju' : null); // Reset response when changing selection, default to sanju on mobile
+    window.scrollTo(0, 0); // Scroll to top when selection changes
   }, [selected]);
 
   // Use original classnames for containers, but keep <img> for images
@@ -87,13 +90,16 @@ const Phase03 = () => {
             data-id={current.id}
             title={`This one's a ${current.credit}-Blot`}
             alt="Rorschach Blot"
-            style={{
-              width: showResponse ? "45%" : "75%",
-              height: "auto",
-              display: "block",
-                marginTop: showResponse ? "50px" : "10px",
-
-            }}
+            style={
+              isMobile
+                ? { height: "auto", display: "block" }
+                : {
+                    width: showResponse ? "45%" : "75%",
+                    height: "auto",
+                    display: "block",
+                    marginTop: showResponse ? "50px" : "10px",
+                  }
+            }
           />
         </div>
         <div className="u-clearboth"></div>

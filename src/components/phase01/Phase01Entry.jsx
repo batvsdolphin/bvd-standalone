@@ -10,15 +10,22 @@ const Phase01Entry = ({ data, count }) => {
 
   const [sanjuCountdown, setSanjuCountdown] = useState(0);
   const [nateCountdown, setNateCountdown] = useState(0);
+  const [sanjuPlaying, setSanjuPlaying] = useState(false);
+  const [natePlaying, setNatePlaying] = useState(false);
 
-  const handleAudioPlay = (audioRef, setCountdown, timerRef) => {
+  // Detect touch device
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+  const handleAudioPlay = (audioRef, setCountdown, timerRef, setPlaying) => {
     audioRef.current.play();
     setCountdown(10);
-    
+    setPlaying(true);
+
     timerRef.current = setInterval(() => {
       setCountdown(prev => {
         if (prev <= 1) {
           clearInterval(timerRef.current);
+          setPlaying(false);
           return 0;
         }
         return prev - 1;
@@ -26,11 +33,20 @@ const Phase01Entry = ({ data, count }) => {
     }, 1000);
   };
 
-  const handleAudioPause = (audioRef, setCountdown, timerRef) => {
+  const handleAudioPause = (audioRef, setCountdown, timerRef, setPlaying) => {
     audioRef.current.pause();
     audioRef.current.currentTime = 0;
     setCountdown(0);
+    setPlaying(false);
     clearInterval(timerRef.current);
+  };
+
+  const handleAudioToggle = (audioRef, setCountdown, timerRef, isPlaying, setPlaying) => {
+    if (isPlaying) {
+      handleAudioPause(audioRef, setCountdown, timerRef, setPlaying);
+    } else {
+      handleAudioPlay(audioRef, setCountdown, timerRef, setPlaying);
+    }
   };
 
   return (
@@ -50,8 +66,13 @@ const Phase01Entry = ({ data, count }) => {
               className="AudioCircle hvr-pulse"
               style={{ borderColor: sanju.color }}
               title={sanju.description}
-              onMouseEnter={() => handleAudioPlay(sanjuAudioRef, setSanjuCountdown, sanjuTimerRef)}
-              onMouseLeave={() => handleAudioPause(sanjuAudioRef, setSanjuCountdown, sanjuTimerRef)}
+              {...(!isTouchDevice && {
+                onMouseEnter: () => handleAudioPlay(sanjuAudioRef, setSanjuCountdown, sanjuTimerRef, setSanjuPlaying),
+                onMouseLeave: () => handleAudioPause(sanjuAudioRef, setSanjuCountdown, sanjuTimerRef, setSanjuPlaying)
+              })}
+              {...(isTouchDevice && {
+                onClick: () => handleAudioToggle(sanjuAudioRef, setSanjuCountdown, sanjuTimerRef, sanjuPlaying, setSanjuPlaying)
+              })}
             >
               {sanjuCountdown > 0 && (
                 <div className="CountdownTimer" style={{ color: sanju.color }}>
@@ -78,8 +99,13 @@ const Phase01Entry = ({ data, count }) => {
               className="AudioCircle hvr-pulse"
               style={{ borderColor: nate.color }}
               title={nate.description}
-              onMouseEnter={() => handleAudioPlay(nateAudioRef, setNateCountdown, nateTimerRef)}
-              onMouseLeave={() => handleAudioPause(nateAudioRef, setNateCountdown, nateTimerRef)}
+              {...(!isTouchDevice && {
+                onMouseEnter: () => handleAudioPlay(nateAudioRef, setNateCountdown, nateTimerRef, setNatePlaying),
+                onMouseLeave: () => handleAudioPause(nateAudioRef, setNateCountdown, nateTimerRef, setNatePlaying)
+              })}
+              {...(isTouchDevice && {
+                onClick: () => handleAudioToggle(nateAudioRef, setNateCountdown, nateTimerRef, natePlaying, setNatePlaying)
+              })}
             >
               {nateCountdown > 0 && (
                 <div className="CountdownTimer" style={{ color: nate.color }}>

@@ -8,6 +8,11 @@
     padding-top: 150px;
     margin: 0 auto;
 
+    @include breakpoint(sm) {
+      width: 80%;
+      padding-top: 80px;
+    }
+
     img {
       width: 100%;
       height: auto;
@@ -18,5 +23,10 @@
   &__Entries {
     text-align: center;
     margin: 50px auto 50px auto;
+
+    @include breakpoint(sm) {
+      margin: 30px auto;
+      padding: 0 10px;
+    }
   }
 }

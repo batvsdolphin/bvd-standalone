@@ -1,0 +1,216 @@
+// Phase 06 - Audio Clips
+.Phase06 {
+  background: #1a1a1a !important;
+  color: #ffffff;
+  min-height: 100vh;
+  padding-bottom: 100px;
+
+  &__Title {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    max-width: 500px;
+
+    @include breakpoint(sm) {
+      width: 90%;
+      padding-top: 80px;
+      padding-bottom: 30px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__Content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @include breakpoint(sm) {
+      width: 95%;
+    }
+  }
+
+  &__Prompts {
+    // Individual prompt container (each prompt with Nate and Sanju entries)
+    > div {
+      margin-bottom: 80px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 60px;
+
+      @include breakpoint(sm) {
+        margin-bottom: 50px;
+        padding-bottom: 40px;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      // Prompt title with emoji
+      > h3 {
+        font-size: 28px;
+        margin-bottom: 40px;
+        font-weight: bold;
+        grid-column: 1 / -1;
+
+        @include breakpoint(sm) {
+          font-size: 20px;
+          margin-bottom: 25px;
+        }
+
+        span {
+          display: inline-block;
+          margin-right: 15px;
+
+          @include breakpoint(sm) {
+            display: block;
+            font-size: 60px !important;
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      // Grid layout for entries - 2 columns on desktop, 1 on mobile
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+
+      @include breakpoint(sm) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      // Entry divs (Nate and Sanju)
+      > div {
+        border-left: 3px solid rgba(255, 255, 255, 0.3);
+        padding-left: 25px;
+
+        @include breakpoint(sm) {
+          border-left: none;
+          border-top: 2px solid rgba(255, 255, 255, 0.3);
+          padding-left: 0;
+          padding-top: 20px;
+        }
+
+        h3 {
+          font-size: 18px;
+          margin-bottom: 12px;
+          color: #ffffff;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+
+          @include breakpoint(sm) {
+            font-size: 16px;
+            margin-bottom: 10px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 15px;
+          color: rgba(255, 255, 255, 0.85);
+
+          @include breakpoint(sm) {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  // Audio Player
+  .Player {
+    display: flex;
+    align-items: stretch;
+    border: 2px solid #ffffff !important;
+    background: #000000;
+    margin-top: 20px;
+    overflow: hidden;
+    height: 60px;
+    max-width: 400px;
+
+    @include breakpoint(sm) {
+      max-width: 100%;
+      height: 50px;
+      flex-wrap: nowrap;
+    }
+
+    p {
+      font-family: "Courier New", monospace;
+      font-size: 18px;
+      font-weight: bold;
+      color: #00ff00;
+      background: #000000;
+      padding: 0 20px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 2px solid #ffffff;
+      min-width: 80px;
+      flex-shrink: 0;
+
+      @include breakpoint(sm) {
+        font-size: 14px;
+        padding: 0 10px;
+        min-width: 60px;
+      }
+    }
+
+    button {
+      font-family: "Arial", sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      background: #000000;
+      color: #ffffff;
+      border: none;
+      border-right: 2px solid #ffffff;
+      padding: 0 20px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include breakpoint(sm) {
+        font-size: 12px;
+        padding: 0 10px;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:hover {
+        background: #333333;
+      }
+
+      &:active {
+        background: #555555;
+      }
+
+      p {
+        border: none;
+        padding: 0;
+        margin: 0;
+        min-width: auto;
+        color: #ffffff;
+
+        @include breakpoint(sm) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
